@@ -79,11 +79,12 @@ def perform_operation(operator, operand1, operand2):
         raise ValueError("Invalid operator")
 
 
+#运行计算器 在图形界面接口调用此函数
+def main():
+    a=input("enter the equation:")
 
-a=input("enter the equation:")
+    output = infix_to_postfix(a)
+    
+    print(output)
 
-output = infix_to_postfix(a)
-
-print(output)
-
-print(evaluate_postfix(output))
+    return (evaluate_postfix(output))
